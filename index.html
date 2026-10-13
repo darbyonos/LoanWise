@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanWise - Smart Loan Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            LoanWise
+        </div>
+
+        <nav>
+            <a href="#calculator">Calculator</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                SMART FINANCIAL PLANNING
+            </p>
+
+            <h1>
+                Calculate Your Loan
+                <span>Repayment</span>
+            </h1>
+
+            <p>
+                Estimate your monthly payment,
+                total interest and total repayment
+                before making a financial decision.
+            </p>
+
+            <a href="#calculator" class="hero-btn">
+                Calculate Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALCULATOR
+    ========================== -->
+
+    <section
+        class="calculator-section"
+        id="calculator"
+    >
+
+        <div class="calculator-container">
+
+            <!-- FORM -->
+
+            <div class="calculator-form">
+
+                <h2>Loan Calculator</h2>
+
+                <p class="description">
+                    Enter your loan details below.
+                </p>
+
+
+                <form id="loanForm">
+
+                    <!-- Loan Amount -->
+
+                    <div class="form-group">
+
+                        <label for="loanAmount">
+                            Loan Amount
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>₦</span>
+
+                            <input
+                                type="number"
+                                id="loanAmount"
+                                placeholder="500000"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Interest Rate -->
+
+                    <div class="form-group">
+
+                        <label for="interestRate">
+                            Annual Interest Rate (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="interestRate"
+                            placeholder="10"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <!-- Loan Duration -->
+
+                    <div class="form-group">
+
+                        <label for="loanDuration">
+                            Loan Duration (Years)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="loanDuration"
+                            placeholder="2"
+                        >
+
+                    </div>
+
+
+                    <p
+                        id="errorMessage"
+                        class="error-message"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Calculate Loan
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- RESULTS -->
+
+            <div class="result-container">
+
+                <div class="result-header">
+
+                    <h2>
+                        Your Results
+                    </h2>
+
+                    <p>
+                        Estimated repayment summary
+                    </p>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span>
+                        Monthly Payment
+                    </span>
+
+                    <h3 id="monthlyPayment">
+                        ₦0
+                    </h3>
+
+                </div>
+
+
+                <div class="result-grid">
+
+                    <div class="result-item">
+
+                        <span>
+                            Loan Amount
+                        </span>
+
+                        <strong id="displayLoan">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>
+                            Total Interest
+                        </span>
+
+                        <strong id="totalInterest">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>
+                            Total Repayment
+                        </span>
+
+                        <strong id="totalPayment">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>
+                            Number of Payments
+                        </span>
+
+                        <strong id="numberOfPayments">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <p class="small-title">
+                HOW IT WORKS
+            </p>
+
+            <h2>
+                Simple. Fast. Easy to understand.
+            </h2>
+
+            <p>
+                Enter your desired loan amount,
+                annual interest rate and loan
+                duration. LoanWise calculates an
+                estimated monthly repayment and
+                total cost of the loan.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <span>01</span>
+
+                <h3>
+                    Enter Details
+                </h3>
+
+                <p>
+                    Provide the loan amount,
+                    interest rate and duration.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>02</span>
+
+                <h3>
+                    Calculate
+                </h3>
+
+                <p>
+                    Our JavaScript calculator
+                    processes the information.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>03</span>
+
+                <h3>
+                    View Results
+                </h3>
+
+                <p>
+                    See your estimated monthly
+                    payment and total repayment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 LoanWise. Demo project for
+            educational and portfolio purposes.
+        </p>
+        <h6 class="darb">Designed by Onoseigho Darby</h6>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
